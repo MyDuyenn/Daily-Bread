@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud"
+    android:splitMotionEvents="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".LocationScreen">
+
+    <!-- FRAME HEADER -->
+
+    <ImageView
+        android:background="@color/dark_green"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:splitMotionEvents="false"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            tools:ignore="UselessParent">
+
+            <!--BUTTON BACK-->
+            <ImageButton
+                android:id="@+id/back"
+                android:background="@null"
+                android:src="@drawable/btn_back"
+                android:scaleType="fitCenter"
+                android:paddingLeft="10dp"
+                android:paddingRight="14dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp" />
+
+            <!-- TEXT PROFILE -->
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/location_title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--FRAME CONTENT-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--BACKGROUND PHOTO-->
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/store_location">
+        </ImageView>
+
+        <!--CONTENT-->
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="490dp"
+            android:layout_marginLeft="30dp"
+            android:background="@color/lite_white">
+
+            <!--STORE INFO-->
+            <TextView
+                android:id="@+id/storeInfo"
+                android:layout_width="210dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="60dp"
+                android:text="@string/location_info"
+                android:textColor="@color/black"
+                android:textSize="@dimen/location_info" />
+
+            <!--STORE CITY-->
+            <TextView
+                android:id="@+id/location_city"
+                android:layout_below="@id/storeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="@string/location_city"
+                android:textSize="@dimen/location_city"
+                android:textColor="@color/light_orange"/>
+
+            <!--PHONE NUMBER-->
+            <TextView
+                android:id="@+id/location_phone"
+                android:layout_width="232dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/location_city"
+                android:layout_marginLeft="60dp"
+                android:text="@string/location_phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/location_phone" />
+
+            <!--ADDRESS-->
+            <TextView
+                android:id="@+id/location_address"
+                android:layout_width="185dp"
+                android:layout_height="73dp"
+                android:layout_below="@id/location_phone"
+                android:layout_marginLeft="60dp"
+                android:text="@string/location_address"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/location_phone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

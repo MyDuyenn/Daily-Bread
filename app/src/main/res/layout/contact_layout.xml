@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray2"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/contact_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:textSize="20dp"
+            android:textColor="@color/dark_green"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contact_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date Time"
+            android:textSize="20dp"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold"
+            android:layout_below="@+id/contact_user_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/contact_user_comment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Comment"
+            android:textSize="20dp"
+            android:textColor="@color/dark_green"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/contact_date_time"
+            android:layout_marginTop="15dp" />
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroud"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home"
+    tools:showIn="@layout/app_bar_home">
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--BACKGROUND PHOTO-->
+            <ImageView
+                android:id="@+id/imgBrand"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/homebackground">
+            </ImageView>
+
+            <!--OUR VALUE-->
+            <RelativeLayout
+                android:alpha="0.7"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <TextView
+                    android:id="@+id/ourValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_value"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="@color/dark_green"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <!--HOME CONTENT-->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="320dp"
+                    android:layout_height="360dp"
+                    android:layout_marginLeft="48dp"
+                    android:background="@color/lite_white">
+
+                    <!--FRESHNESS-->
+                    <TextView
+                        android:id="@+id/freshness"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_freshness"
+                        android:layout_marginLeft="75dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/home_fresh"
+                        android:textColor="@color/light_orange"/>
+
+                    <TextView
+                        android:id="@+id/freshness_content"
+                        android:layout_width="200dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/freshness"
+                        android:layout_marginLeft="63dp"
+                        android:gravity="center"
+                        android:text="@string/home_freshness_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_fresh_content" />
+
+                    <!--JOYFUL-->
+                    <TextView
+                        android:id="@+id/joyful"
+                        android:layout_below="@id/freshness_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_joyful"
+                        android:layout_marginLeft="78dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/home_fresh"
+                        android:textColor="@color/light_orange"/>
+
+                    <TextView
+                        android:id="@+id/joyful_content"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/joyful"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center"
+                        android:text="@string/home_joyful_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_fresh_content" />
+
+                    <!--OCCASIONS-->
+                    <TextView
+                        android:id="@+id/occasion"
+                        android:layout_below="@id/joyful_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_occasion"
+                        android:layout_marginLeft="78dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/home_fresh"
+                        android:textColor="@color/light_orange"/>
+
+                    <TextView
+                        android:id="@+id/occasion_content"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_below="@id/occasion"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="center"
+                        android:text="@string/home_occasion_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/home_fresh_content" />
+
+                </RelativeLayout>
+
+            </GridLayout>
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

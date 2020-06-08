@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">EcommerceBakery</string>
+
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="text_do_not_have_an_account">DON"T HAVE AN ACCOUNT?</string>
+    <string name="already_have_an_account">ALREADY HAVE AN ACCOUNT?</string>
+    <string name="text_sign_up">SIGN UP</string>
+    <string name="text_sign_in">SIGN IN</string>
+    <string name="text_name">NAME</string>
+    <string name="text_phone">PHONE NUMBER</string>
+    <string name="text_email">EMAIL</string>
+    <string name="text_password">PASSWORD</string>
+    <string name="text_confirm_password">CONFIRM PASSWORD</string>
+    <string name="text_im_admin">I\'M AN ADMIN</string>
+    <string name="text_im_not_admin">I\'M NOT AN ADMIN</string>
+
+    <string name="create_sign_in">LOGIN</string>
+    <string name="create_sign_up">SIGN UP</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_default_name">Janet Smith</string>
+    <string name="nav_default_email">janet@email.com</string>
+    <string name="nav_btn_home">Home</string>
+    <string name="nav_btn_profile">Profile</string>
+    <string name="nav_btn_gallery">Gallery</string>
+    <string name="nav_btn_sign_out">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_products">Products</string>
+    <string name="menu_locations">Location</string>
+    <string name="menu_events">Events</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_orders">History Orders</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_category">Category</string>
+    <string name="menu_comment">Comments</string>
+
+    <string name="home_value">Our Value</string>
+    <string name="home_freshness">Freshness - Quality</string>
+    <string name="home_freshness_content">We promise our customers to offer quality products made with fresh ingredients.</string>
+    <string name="home_joyful">Joyful Experience</string>
+    <string name="home_joyful_content">We strive to spread joy to our guests through our menu items, our service and environment.</string>
+    <string name="home_occasion">All Day Occasion</string>
+    <string name="home_occasion_content">With more than 300 menu items available, we can fulfill our customers daily occasion needs.</string>
+
+    <string name="location_title">Location</string>
+    <string name="location_info">Store Locator Information</string>
+    <string name="location_city">Ho Chi Minh City</string>
+    <string name="location_phone">(+84)942 540 906 (+84)582 826 577</string>
+    <string name="location_address">155 Su Van Hanh, Ward 13, District 10</string>
+
+    <string name="contact_title">Contact</string>
+    <string name="contact_request">Request More Information</string>
+    <string name="contact_req_under">Submit the form below and our team will get back to you soon!</string>
+    <string name="contact_name">*Name</string>
+    <string name="contact_phone">*Comment</string>
+    <string name="contact_required">*Indicates required field</string>
+    <string name="contact_submit">Submit</string>
+
+    <string name="event_title">Event</string>
+
+    <string name="reset_pass_title">Reset Password</string>
+    <string name="reset_pass_find_phone">Please write your phone number</string>
+    <string name="reset_pass_answer_ques">Answer The Following Security Questions?</string>
+    <string name="reset_pass_ques1_title">Question 1</string>
+    <string name="reset_pass_question_1">Where did your parents first meet?</string>
+    <string name="reset_pass_ques2_title">Question 2</string>
+    <string name="reset_pass_question_2">Which film did you first watch?</string>
+
+    <string name="profile_title">Profile</string>
+    <string name="name">NAME</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="phone">PHONE NUMBER</string>
+    <string name="enter_phone">Enter phone number</string>
+    <string name="email">EMAIL</string>
+    <string name="enter_email">Enter email</string>
+    <string name="password">PASSWORD</string>
+    <string name="enter_password">Enter password</string>
+    <string name="old_password">Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="title_activity_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="new_product_title">New Product</string>
+    <string name="detail_product_title">Product Detail</string>
+    <string name="product">PRODUCT</string>
+    <string name="enter_product">Enter product</string>
+    <string name="description">DESCRIPTION</string>
+    <string name="enter_description">Enter description</string>
+    <string name="price">PRODUCT PRICE</string>
+    <string name="enter_price">Enter product price</string>
+    <string name="product_title">PRODUCT</string>
+
+    <string name="new_event">New Event</string>
+    <string name="event">Event</string>
+    <string name="enter_event">Enter event</string>
+    <string name="event_value">Khuyến Mãi</string>
+
+    <string name="search_title">Search</string>
+    <string name="title_activity_admin_home">AdminHome</string>
+</resources>

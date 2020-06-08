@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:src="@drawable/no_avatar"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/nav_avatar"-->
+        <!--android:src="@drawable/no_avatar"-->
+        <!--android:layout_width="@dimen/nav_avatar_size"-->
+        <!--android:layout_height="@dimen/nav_avatar_size"-->
+        <!--android:layout_margin="@dimen/nav_avatar_margin"-->
+        <!--android:scaleType="centerInside" />-->
+
+    <TextView
+        android:id="@+id/nav_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_default_name"
+        android:textColor="#1d1d26"
+        android:textSize="@dimen/nav_name_text_size"
+        android:layout_marginLeft="@dimen/nav_text_margin_left"
+        android:layout_marginTop="20px"
+        android:layout_toRightOf="@id/nav_avatar"
+        android:layout_alignTop="@id/nav_avatar"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@+id/nav_email"
+        android:text="@string/nav_default_email"
+        android:textSize="@dimen/nav_email_text_size"
+        android:textColor="#991d1d26"
+        android:layout_marginLeft="@dimen/nav_text_margin_left"
+        android:layout_toRightOf="@id/nav_avatar"
+        android:layout_below="@id/nav_username"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_below="@id/nav_email"
+        android:layout_marginLeft="@dimen/nav_content_line_margin_left"
+        android:layout_marginTop="@dimen/nav_line_margin_top"
+        android:background="@color/dark_green"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_line_height" />
+
+</RelativeLayout>

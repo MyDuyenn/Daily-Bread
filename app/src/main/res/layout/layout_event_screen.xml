@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud"
+    android:splitMotionEvents="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".EventScreen">
+
+    <!-- FRAME HEADER -->
+
+    <ImageView
+        android:background="@color/dark_green"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:splitMotionEvents="false"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            tools:ignore="UselessParent">
+
+            <!--BUTTON BACK-->
+            <ImageButton
+                android:id="@+id/back"
+                android:background="@null"
+                android:src="@drawable/btn_back"
+                android:scaleType="fitCenter"
+                android:paddingLeft="10dp"
+                android:paddingRight="14dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp" />
+
+            <!-- TEXT PROFILE -->
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/event_title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--FRAME CONTENT-->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--BACKGROUND PHOTO-->
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/event">
+        </ImageView>
+
+        <!--CONTENT-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/imgLocation"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_event"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

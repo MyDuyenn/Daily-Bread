@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:splitMotionEvents="false"
+    android:gravity="bottom"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:src="@drawable/no_avatar"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <TextView
+        android:id="@+id/nav_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hi, Admin !"
+        android:textColor="#1d1d26"
+        android:textSize="@dimen/nav_name_text_size"
+        android:layout_marginLeft="@dimen/nav_text_margin_left"
+        android:layout_marginTop="40px"
+        android:layout_toRightOf="@id/nav_avatar"
+        android:layout_alignTop="@id/nav_avatar"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+    <View
+        android:layout_below="@id/nav_admin"
+        android:layout_marginLeft="@dimen/nav_content_line_margin_left"
+        android:layout_marginTop="@dimen/nav_line_margin_top"
+        android:background="@color/dark_green"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_line_height" />
+
+</RelativeLayout>

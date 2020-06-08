@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "72070824593",
+    "firebase_url": "https://ecommercebakery.firebaseio.com",
+    "project_id": "ecommercebakery",
+    "storage_bucket": "ecommercebakery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72070824593:android:68b7d51cc0eecdbed4b530",
+        "android_client_info": {
+          "package_name": "com.tmdt.ecommercebakery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72070824593-p46g827urvqdtmk4nu50c6rlbr9d5nt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tmdt.ecommercebakery",
+            "certificate_hash": "69126469dcfdf3c6b71fe50da74181793206eddf"
+          }
+        },
+        {
+          "client_id": "72070824593-ut8sm4fhs4h0corn6tjeobe3bknl1soi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTXMvY3bPDPTymrDd37JZen9x_vd_3FhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72070824593-ut8sm4fhs4h0corn6tjeobe3bknl1soi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

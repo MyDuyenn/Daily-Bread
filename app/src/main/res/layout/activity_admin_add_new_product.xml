@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddNewProduct">
+
+
+    <!--TOOL BAR-->
+
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_green"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:background="@null"
+            android:src="@drawable/btn_back"
+            android:scaleType="fitCenter"
+            android:paddingLeft="10dp"
+            android:paddingRight="14dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_product_title"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/select_product_image"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/menuBar"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:padding="50dp"
+        android:src="@drawable/camara_image"/>
+
+    <!-- PRODUCT NAME -->
+    <ImageView
+        android:id="@+id/product_icon"
+        app:srcCompat="@drawable/ic_cake"
+        android:layout_below="@id/select_product_image"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginTop="@dimen/profile_content_margin_top"
+        android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+        android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+        android:scaleType="fitCenter"
+        android:layout_width="@dimen/sign_email_icon_width"
+        android:layout_height="@dimen/sign_email_icon_height" />
+
+    <TextView
+        android:text="@string/product"
+        android:textSize="@dimen/product_size"
+        android:textColor="@color/black"
+        android:id="@+id/product_name"
+        android:layout_toRightOf="@id/product_icon"
+        android:layout_alignTop="@id/product_icon"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtProductName"
+        android:textSize="@dimen/sign_text_size2"
+        android:layout_below="@id/product_name"
+        android:layout_toRightOf="@id/product_icon"
+        android:layout_alignBottom="@id/product_icon"
+        android:gravity="center_vertical"
+        android:background="@null"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/gray"
+        android:enabled="true"
+        android:hint="@string/enter_product"
+        android:imeOptions="actionNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/product_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginRight="@dimen/profile_content_padding"
+        android:layout_below="@id/product_icon"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!-- DESCRIPTION HERE -->
+    <ImageView
+        android:id="@+id/description_icon"
+        app:srcCompat="@drawable/ic_description"
+        android:layout_below="@id/product_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+        android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+        android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+        android:scaleType="fitCenter"
+        android:layout_width="@dimen/sign_email_icon_width"
+        android:layout_height="@dimen/sign_email_icon_height" />
+
+    <TextView
+        android:text="@string/description"
+        android:textSize="@dimen/product_size"
+        android:textColor="@color/black"
+        android:id="@+id/description_title"
+        android:layout_toRightOf="@id/description_icon"
+        android:layout_alignTop="@id/description_icon"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtProductDescription"
+        android:textSize="@dimen/sign_text_size2"
+        android:layout_below="@id/description_title"
+        android:layout_toRightOf="@id/description_icon"
+        android:layout_alignBottom="@id/description_icon"
+        android:gravity="center_vertical"
+        android:background="@null"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:enabled="true"
+        android:textColor="@color/gray"
+        android:hint="@string/enter_description"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/description_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginRight="@dimen/profile_content_padding"
+        android:layout_below="@id/description_icon"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!-- PRODUCT PRICE -->
+    <ImageView
+        android:id="@+id/price_icon"
+        app:srcCompat="@drawable/ic_price"
+        android:layout_below="@id/description_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+        android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+        android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+        android:scaleType="fitCenter"
+        android:layout_width="@dimen/sign_email_icon_width"
+        android:layout_height="@dimen/sign_email_icon_height" />
+
+    <TextView
+        android:text="@string/price"
+        android:textSize="@dimen/product_size"
+        android:textColor="@color/black"
+        android:id="@+id/price_title"
+        android:layout_toRightOf="@id/price_icon"
+        android:layout_alignTop="@id/price_icon"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtProductPrice"
+        android:textSize="@dimen/sign_text_size2"
+        android:layout_below="@id/price_title"
+        android:layout_toRightOf="@id/price_icon"
+        android:layout_alignBottom="@id/price_icon"
+        android:gravity="center_vertical"
+        android:background="@null"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:enabled="true"
+        android:textColor="@color/gray"
+        android:hint="@string/enter_price"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/price_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginRight="@dimen/profile_content_padding"
+        android:layout_below="@id/price_icon"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!--BUTTON ADD PRODUCT-->
+    <Button
+        android:id="@+id/add_new_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtProductPrice"
+        android:text="Add Product"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp"
+        android:padding="17dp"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/button_btn"
+    />
+
+    <!--<EditText-->
+        <!--android:id="@+id/edtProductName"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/select_product_image"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:padding="20dp"-->
+        <!--android:hint="Product Name...."-->
+        <!--android:layout_marginLeft="45dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:background="@drawable/input_design"-->
+        <!--/>-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/edtProductDescription"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/edtProductName"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:padding="20dp"-->
+        <!--android:hint="Description Here ...."-->
+        <!--android:layout_marginLeft="45dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:background="@drawable/input_design"-->
+        <!--/>-->
+    <!--<EditText-->
+        <!--android:id="@+id/edtProductPrice"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/edtProductDescription"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:padding="20dp"-->
+        <!--android:hint="Product Price...."-->
+        <!--android:layout_marginLeft="45dp"-->
+        <!--android:layout_marginRight="50dp"-->
+        <!--android:background="@drawable/input_design"-->
+        <!--/>-->
+
+
+</RelativeLayout>

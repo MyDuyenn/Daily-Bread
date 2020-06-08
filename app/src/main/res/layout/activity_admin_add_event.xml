@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddEvent">
+
+
+    <!--TOOL BAR-->
+
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_weight="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_green"
+        android:splitMotionEvents="false">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:background="@null"
+            android:src="@drawable/btn_back"
+            android:scaleType="fitCenter"
+            android:paddingLeft="10dp"
+            android:paddingRight="14dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_event"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/select_event_image"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/menuBar"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:padding="50dp"
+        android:src="@drawable/camara_image"/>
+
+    <!-- EVENT NAME -->
+    <ImageView
+        android:id="@+id/event_icon"
+        app:srcCompat="@drawable/ic_new_event"
+        android:layout_below="@id/select_event_image"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginTop="@dimen/profile_content_margin_top"
+        android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+        android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+        android:scaleType="fitCenter"
+        android:layout_width="@dimen/sign_email_icon_width"
+        android:layout_height="@dimen/sign_email_icon_height" />
+
+    <TextView
+        android:text="@string/event"
+        android:textSize="@dimen/product_size"
+        android:textColor="@color/black"
+        android:id="@+id/tvEvent_name"
+        android:layout_toRightOf="@id/event_icon"
+        android:layout_alignTop="@id/event_icon"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edtEventName"
+        android:textSize="@dimen/sign_text_size2"
+        android:layout_below="@id/tvEvent_name"
+        android:layout_toRightOf="@id/event_icon"
+        android:layout_alignBottom="@id/event_icon"
+        android:gravity="center_vertical"
+        android:background="@null"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/gray"
+        android:enabled="true"
+        android:hint="@string/enter_event"
+        android:imeOptions="actionNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/event_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginRight="@dimen/profile_content_padding"
+        android:layout_below="@id/event_icon"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!-- DESCRIPTION HERE -->
+    <ImageView
+        android:id="@+id/description_icon"
+        app:srcCompat="@drawable/ic_description"
+        android:layout_below="@id/event_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+        android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+        android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+        android:scaleType="fitCenter"
+        android:layout_width="@dimen/sign_email_icon_width"
+        android:layout_height="@dimen/sign_email_icon_height" />
+
+    <TextView
+        android:text="@string/description"
+        android:textSize="@dimen/product_size"
+        android:textColor="@color/black"
+        android:id="@+id/description_title"
+        android:layout_toRightOf="@id/description_icon"
+        android:layout_alignTop="@id/description_icon"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edtEventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/description_title"
+        android:layout_toRightOf="@id/description_icon"
+        android:background="@null"
+        android:ellipsize="end"
+        android:enabled="true"
+        android:gravity="center_vertical"
+        android:hint="@string/enter_description"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:singleLine="true"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sign_text_size2" />
+    <View
+        android:id="@+id/description_under"
+        android:layout_marginLeft="@dimen/profile_content_padding"
+        android:layout_marginRight="@dimen/profile_content_padding"
+        android:layout_below="@id/edtEventDescription"
+        android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+
+    <!--BUTTON ADD PRODUCT-->
+    <Button
+        android:id="@+id/add_new_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtEventDescription"
+        android:text="Add Event"
+        android:layout_marginRight="45dp"
+        android:layout_marginLeft="45dp"
+        android:padding="17dp"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/button_btn"
+        />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductScreen2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@color/dark_green"
+            android:splitMotionEvents="false"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            tools:ignore="UselessParent">
+
+            <!--BUTTON BACK-->
+            <ImageButton
+                android:id="@+id/back"
+                android:background="@null"
+                android:src="@drawable/btn_back"
+                android:scaleType="fitCenter"
+                android:paddingLeft="10dp"
+                android:paddingRight="14dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp" />
+
+            <!-- TEXT PROFILE -->
+            <TextView
+                android:textColor="@color/white"
+                android:text="Croissant"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/cart_imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/home_btn_menu_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/dark_green"
+                android:paddingLeft="@dimen/home_btn_menu_padding"
+                android:paddingTop="@dimen/home_btn_menu_padding"
+                android:paddingBottom="@dimen/home_btn_menu_padding"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+
+        </RelativeLayout>
+
+        <!--<SearchView-->
+        <!--android:id="@+id/searchView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:queryHint="Search Here"-->
+        <!--android:iconifiedByDefault="false"-->
+        <!--android:layout_alignParentTop="true">-->
+        <!--</SearchView>-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/search_product_name"
+                android:layout_width="300dp"
+                android:background="@drawable/btn_cake_pressed"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/toolbar"
+                android:hint="Search product"
+                android:iconifiedByDefault="false">
+                android:iconifiedByDefault="false">
+            </EditText>
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/toolbar"
+                android:layout_toRightOf="@id/search_product_name"
+                android:text="Search"
+                android:textColor="@color/dark_green"
+                android:background="@drawable/transparent_bg_bordered_button"/>
+        </LinearLayout>
+        <ViewFlipper
+            android:id="@+id/viewFipperCake"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/backgroundcake3">
+        </ViewFlipper>
+
+        <!--BUTTON OPTION-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnCake"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cake"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:background="@color/green_a200"/>
+            <Button
+                android:id="@+id/btnCroissant"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Croissant"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:background="@color/light_green"/>
+            <Button
+                android:id="@+id/btnLightMeal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LightMeal"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:background="@color/green_a200"/>
+            <Button
+                android:id="@+id/btnDessert"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dessert"
+                android:textSize="12dp"
+                android:textColor="@color/black"
+                android:background="@color/green_a200"/>
+        </LinearLayout>
+
+        <GridLayout
+            android:paddingTop="10dp"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:columnOrderPreserved="false">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

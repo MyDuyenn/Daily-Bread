@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/backgroud"
+    android:orientation="vertical"
+    android:splitMotionEvents="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="ContentDescription"
+    tools:context=".ProfileScreen">
+
+    <!-- FRAME HEADER -->
+
+    <ImageView
+        android:background="@color/dark_green"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@id/header"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:splitMotionEvents="false"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            tools:ignore="UselessParent">
+
+            <!--BUTTON BACK-->
+            <ImageButton
+                android:id="@+id/back"
+                android:background="@null"
+                android:src="@drawable/btn_back"
+                android:scaleType="fitCenter"
+                android:paddingLeft="10dp"
+                android:paddingRight="14dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp" />
+
+            <!-- TEXT PROFILE -->
+            <TextView
+                android:textColor="@color/white"
+                android:text="@string/profile_title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--SAVE BUTTON-->
+            <ImageButton
+                android:id="@+id/update"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:paddingBottom="@dimen/sign_edit_icon_padding_bottom"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_save" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!--FRAME CONTENT-->
+
+    <RelativeLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/content"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- AVATAR -->
+        <ImageView
+            android:id="@+id/avatar"
+            android:src="@drawable/no_avatar"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/profile_content_avatar_margin_top"
+            android:layout_width="@dimen/profile_content_avatar_size"
+            android:layout_height="@dimen/profile_content_avatar_size"
+            android:background="@null"/>
+
+        <!-- NAME -->
+        <ImageView
+            android:id="@+id/name_icon"
+            app:srcCompat="@drawable/ic_profile_name"
+            android:layout_below="@id/avatar"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginTop="@dimen/profile_content_margin_top"
+            android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+            android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/sign_email_icon_width"
+            android:layout_height="@dimen/sign_email_icon_height" />
+
+        <TextView
+            android:text="@string/name"
+            android:textSize="@dimen/sign_text_size"
+            android:textColor="@color/black"
+            android:id="@+id/name_title"
+            android:layout_toRightOf="@id/name_icon"
+            android:layout_alignTop="@id/name_icon"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/name"
+            android:textSize="@dimen/sign_text_size2"
+            android:layout_below="@id/name_title"
+            android:layout_toRightOf="@id/name_icon"
+            android:layout_alignBottom="@id/name_icon"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            android:hint="@string/enter_name"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/name_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginRight="@dimen/profile_content_padding"
+            android:layout_below="@id/name_icon"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <!-- PHONE -->
+        <ImageView
+            android:id="@+id/phone_icon"
+            app:srcCompat="@drawable/ic_profile_phone"
+            android:layout_below="@id/name_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+            android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+            android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/sign_email_icon_width"
+            android:layout_height="@dimen/sign_email_icon_height" />
+
+        <TextView
+            android:text="@string/phone"
+            android:textSize="@dimen/sign_text_size"
+            android:textColor="@color/black"
+            android:id="@+id/phone_title"
+            android:layout_toRightOf="@id/phone_icon"
+            android:layout_alignTop="@id/phone_icon"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/phone"
+            android:textSize="@dimen/sign_text_size2"
+            android:layout_below="@id/phone_title"
+            android:layout_toRightOf="@id/phone_icon"
+            android:layout_alignBottom="@id/phone_icon"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            android:hint="@string/enter_phone"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/phone_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginRight="@dimen/profile_content_padding"
+            android:layout_below="@id/phone_icon"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <!-- EMAIL -->
+        <ImageView
+            android:id="@+id/email_icon"
+            app:srcCompat="@drawable/ic_profile_email"
+            android:layout_below="@id/phone_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+            android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+            android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/sign_email_icon_width"
+            android:layout_height="@dimen/sign_email_icon_height" />
+
+        <TextView
+            android:text="@string/email"
+            android:textSize="@dimen/sign_text_size"
+            android:textColor="@color/black"
+            android:id="@+id/email_title"
+            android:layout_toRightOf="@id/email_icon"
+            android:layout_alignTop="@id/email_icon"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/email"
+            android:textSize="@dimen/sign_text_size2"
+            android:layout_below="@id/email_title"
+            android:layout_toRightOf="@id/email_icon"
+            android:layout_alignBottom="@id/email_icon"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/gray"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:imeOptions="actionNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/email_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginRight="@dimen/profile_content_padding"
+            android:layout_below="@id/email_icon"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <!-- PASSWORD -->
+        <ImageView
+            android:id="@+id/pass_icon"
+            app:srcCompat="@drawable/ic_profile_key"
+            android:layout_below="@id/email_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginTop="@dimen/sign_pass_icon_margin_top"
+            android:paddingBottom="@dimen/sign_email_icon_padding_bottom"
+            android:layout_marginRight="@dimen/sign_email_icon_margin_right"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/sign_email_icon_width"
+            android:layout_height="@dimen/sign_email_icon_height" />
+
+        <ImageButton
+            android:background="@color/gray2"
+            android:id="@+id/edit_pass"
+            android:src="@drawable/btn_edit"
+            android:layout_alignTop="@id/pass_icon"
+            android:layout_alignBottom="@id/pass_icon"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/profile_content_btn_edit_margin_right"
+            android:paddingBottom="@dimen/sign_edit_icon_padding_bottom"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/sign_edit_icon_width"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="@string/password"
+            android:textSize="@dimen/sign_text_size"
+            android:textColor="@color/black"
+            android:id="@+id/pass_title"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/pass_icon"
+            android:layout_alignTop="@id/pass_icon"
+            android:layout_alignBottom="@id/pass_icon"
+            android:paddingBottom="@dimen/profile_content_pass_text_padding_bottom"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/pass_under"
+            android:layout_marginLeft="@dimen/profile_content_padding"
+            android:layout_marginRight="@dimen/profile_content_padding"
+            android:layout_below="@id/pass_icon"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="2dp" />
+
+        <!--Set security questions-->
+        <Button
+            android:id="@+id/security_questions_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_under"
+            android:text="Set Security Questions"
+            android:layout_marginRight="45dp"
+            android:layout_marginLeft="45dp"
+            android:padding="17dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/button_btn"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
